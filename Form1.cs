@@ -51,7 +51,7 @@ namespace TravelCost
         /* BL */
         private decimal CalculateGallonsUsed(decimal mpg, decimal distance)
         {
-            return distance / mpg;
+
             // i.e. 3 miles, 35 mpg, $3.99/gal
 
             // need to know how many gallons?
@@ -61,6 +61,13 @@ namespace TravelCost
             // 3 (1 / 35) = x
             // 3/35 = x
             // miles traveled / mpg = gallons used
+
+            return distance / mpg;
+        }
+
+        private decimal CalculateCostPerTrip(decimal distanceTraveled, decimal gallonsUsed)
+        {
+            return distanceTraveled * gallonsUsed;
         }
     }
 }
